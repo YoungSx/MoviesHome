@@ -4,6 +4,10 @@
     <string name="app_name">爱电影</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
+    <string name="title_activity_result">ResultActivity</string>
+=======
     <string name="title_activity_jiemian">JiemianActivity</string>
+>>>>>>> origin/HEAD
 
 </resources>

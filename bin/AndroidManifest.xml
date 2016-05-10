@@ -24,11 +24,11 @@
         </activity>
         <activity
 <<<<<<< HEAD
-            android:name="link.shangxin.movies.ResultActivity"
-            android:label="@string/title_activity_result" >
-=======
             android:name="link.shangxin.movies.JiemianActivity"
             android:label="@string/title_activity_jiemian" >
+=======
+            android:name="link.shangxin.movies.ResultActivity"
+            android:label="@string/title_activity_result" >
 >>>>>>> origin/HEAD
         </activity>
     </application>
