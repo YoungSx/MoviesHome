@@ -1,7 +1,12 @@
 package link.shangxin.movies;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import link.shangxin.myapp.ListActivity;
+import link.shangxin.myapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,6 +19,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import com.thinkland.sdk.android.DataCallBack;
 import com.thinkland.sdk.android.JuheData;
@@ -86,6 +93,36 @@ public class MainActivity extends Activity {
 							Movie m = new Movie(obj.getString("name"),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""));
 							movies.add(m);
 						}
+						
+						// 准备数据：数据必须放到集合中
+						ArrayList<Map<String, String>> al = new ArrayList<Map<String, String>>();// storage
+																									// all
+																									// data
+
+						for (int i = 0; i < 100; i++) {
+
+							// 创建一个保存一个Item的数据的集合
+							Map<String, String> item = new HashMap<String, String>();
+
+							item.put("name", "张三" + i);
+							item.put("sex", i % 2 == 0 ? "男" : "女");
+							item.put("age", "25");
+
+							// 将创建好的每条数据存放到总的集合
+							al.add(item);
+						}
+						//创建适配器：按照item.xml布局中的格式填充数据，并将这些item绑定到ListView中
+						
+						SimpleAdapter ada = new SimpleAdapter(
+								ListActivity.this, al, R.layout.hotitem, 
+								new String[]{"name","sex","age"}, 
+								new int[]{R.id.hotName, R.id.tvSex, R.id.tvAge}
+						);
+						
+						lv_info = (ListView) findViewById(R.id.lv_info);
+						
+						lv_info.setAdapter(ada);
+						
 						
 					} catch (JSONException e) {
 						// TODO Auto-generated catch block
