@@ -25,8 +25,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080024;
-        public static final int container=0x7f080023;
+        public static final int action_settings=0x7f080023;
         public static final int hotImage1=0x7f080009;
         public static final int hotImage2=0x7f08000e;
         public static final int hotImage3=0x7f080013;
