@@ -35,9 +35,14 @@ public final class R {
         public static final int activity_result=0x7f030001;
     }
     public static final class menu {
+<<<<<<< HEAD
         public static final int jiemian=0x7f070000;
         public static final int main=0x7f070001;
         public static final int result=0x7f070002;
+=======
+        public static final int main=0x7f070000;
+        public static final int result=0x7f070001;
+>>>>>>> 1dec619cce9e5f33c05ef6aeaa0cd9a1e759c435
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
