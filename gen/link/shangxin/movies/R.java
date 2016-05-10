@@ -25,9 +25,42 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int action_settings=0x7f080023;
+        public static final int hotImage1=0x7f080009;
+        public static final int hotImage2=0x7f08000e;
+        public static final int hotImage3=0x7f080013;
+        public static final int hotImage4=0x7f080018;
+        public static final int hotImage5=0x7f08001d;
+        public static final int hotList=0x7f080022;
         public static final int searchBox=0x7f080000;
         public static final int searchButton=0x7f080001;
+        public static final int text1=0x7f080003;
+        public static final int text11=0x7f08000a;
+        public static final int text12=0x7f08000b;
+        public static final int text13=0x7f08000c;
+        public static final int text14=0x7f08000d;
+        public static final int text15=0x7f08000f;
+        public static final int text16=0x7f080010;
+        public static final int text17=0x7f080011;
+        public static final int text18=0x7f080012;
+        public static final int text19=0x7f080014;
+        public static final int text2=0x7f080004;
+        public static final int text20=0x7f080015;
+        public static final int text21=0x7f080016;
+        public static final int text22=0x7f080017;
+        public static final int text23=0x7f080019;
+        public static final int text24=0x7f08001a;
+        public static final int text25=0x7f08001b;
+        public static final int text26=0x7f08001c;
+        public static final int text27=0x7f08001e;
+        public static final int text28=0x7f08001f;
+        public static final int text29=0x7f080020;
+        public static final int text3=0x7f080005;
+        public static final int text30v=0x7f080021;
+        public static final int text4=0x7f080006;
+        public static final int text5=0x7f080007;
+        public static final int text6=0x7f080008;
+        public static final int thumImage=0x7f080002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
