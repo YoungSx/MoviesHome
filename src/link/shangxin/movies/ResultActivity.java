@@ -19,6 +19,8 @@ public class ResultActivity extends Activity {
 		setContentView(R.layout.activity_result);
 
 		
+		
+		
 	}
 
 }
