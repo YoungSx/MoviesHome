@@ -31,32 +31,17 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-<<<<<<< HEAD
         public static final int activity_result=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
         public static final int result=0x7f070001;
-=======
-    }
-    public static final class menu {
-<<<<<<< HEAD
-        public static final int main=0x7f070000;
-=======
-        public static final int jiemian=0x7f070000;
-        public static final int main=0x7f070001;
->>>>>>> origin/HEAD
->>>>>>> 3d2b6da3ccb00cb60d2a8ce44574d0d1d011a2de
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050001;
-<<<<<<< HEAD
         public static final int title_activity_result=0x7f050003;
-=======
-        public static final int title_activity_jiemian=0x7f050003;
->>>>>>> origin/HEAD
     }
     public static final class style {
         /** 
