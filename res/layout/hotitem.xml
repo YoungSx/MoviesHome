@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	    
+    		<LinearLayout 
+    		    android:layout_width="match_parent"
+    		    android:layout_height="wrap_content"
+    		    android:orientation="vertical">
+    		    <LinearLayout 
+    		        android:layout_width="wrap_content"
+    		        android:layout_height="wrap_content"
+    		        android:orientation="horizontal">
+    		        <ImageView 
+    		            android:id="@+id/hotImage"
+    		            android:layout_weight="3"
+    		             android:layout_width="wrap_content"
+	    		        android:layout_height="wrap_content"/>
+    		        <LinearLayout 
+    		            android:layout_weight="1"
+    		            android:layout_width="wrap_content"
+    		            android:layout_height="wrap_content"
+    		            android:orientation="vertical">
+    		    	 <TextView 
+    		    	     android:id="@+id/hotName"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="wrap_content"
+	    		        android:text="电影名"/>
+    		    	 <TextView 
+    		    	     android:id="@+id/hotBoxoffice"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="wrap_content"
+	    		        android:text="票房"/>
+    		    	 <TextView 
+    		    	     android:id="@+id/hotTotals"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="wrap_content"
+	    		        android:text="总场次"/>
+    		    	 <TextView 
+    		    	     android:id="@+id/hotFare"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="wrap_content"
+	    		        android:text="票价"/>
+    		    	 </LinearLayout>
+    		    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
