@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import link.shangxin.myapp.ListActivity;
-import link.shangxin.myapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -75,6 +73,8 @@ public class MainActivity extends Activity {
 			}
 		});
         
+        
+        
         //获取网票票房
         Parameters hotMoviesParams = new Parameters();
         JuheData.executeWithAPI(44, "http://v.juhe.cn/boxoffice/wp", JuheData.GET, hotMoviesParams, new DataCallBack() {
@@ -94,19 +94,20 @@ public class MainActivity extends Activity {
 							movies.add(m);
 						}
 						
+						
+						
 						// 准备数据：数据必须放到集合中
-						ArrayList<Map<String, String>> al = new ArrayList<Map<String, String>>();// storage
-																									// all
-																									// data
+						ArrayList<Map<String, String>> al = new ArrayList<Map<String, String>>();
 
-						for (int i = 0; i < 100; i++) {
+						for (int i = 0; i < result.length(); i++) {
 
 							// 创建一个保存一个Item的数据的集合
 							Map<String, String> item = new HashMap<String, String>();
 
-							item.put("name", "张三" + i);
-							item.put("sex", i % 2 == 0 ? "男" : "女");
-							item.put("age", "25");
+							item.put("hotName", movies.get(i).getName());
+							item.put("hotBoxoffice", movies.get(i).getBoxoffice());
+							item.put("hotTotals", movies.get(i).getTotals());
+							item.put("hotFare", movies.get(i).getFare());
 
 							// 将创建好的每条数据存放到总的集合
 							al.add(item);
@@ -114,14 +115,15 @@ public class MainActivity extends Activity {
 						//创建适配器：按照item.xml布局中的格式填充数据，并将这些item绑定到ListView中
 						
 						SimpleAdapter ada = new SimpleAdapter(
-								ListActivity.this, al, R.layout.hotitem, 
-								new String[]{"name","sex","age"}, 
-								new int[]{R.id.hotName, R.id.tvSex, R.id.tvAge}
+								MainActivity.this, al, R.layout.hotitem, 
+								new String[]{"hotName","hotBoxoffice","hotTotals","hotFare"}, 
+								new int[]{R.id.hotName, R.id.hotBoxoffice, R.id.hotTotals,R.id.hotFare}
 						);
 						
-						lv_info = (ListView) findViewById(R.id.lv_info);
+						ListView hotList = (ListView) findViewById(R.id.hotList);
 						
-						lv_info.setAdapter(ada);
+						hotList.setAdapter(ada);
+						
 						
 						
 					} catch (JSONException e) {
