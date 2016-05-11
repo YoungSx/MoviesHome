@@ -22,23 +22,32 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int beijing=0x7f020000;
+        public static final int beijing2=0x7f020001;
+        public static final int bg=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080028;
-        public static final int hotBoxoffice=0x7f080025;
-        public static final int hotFare=0x7f080027;
-        public static final int hotImage=0x7f080023;
+        public static final int action_settings=0x7f08002f;
+        public static final int daoyan=0x7f080026;
+        public static final int dianyingming=0x7f080024;
+        public static final int dianyingzhijia=0x7f080023;
+        public static final int hotBoxoffice=0x7f08002c;
+        public static final int hotFare=0x7f08002e;
+        public static final int hotImage=0x7f08002a;
         public static final int hotImage1=0x7f080009;
         public static final int hotImage2=0x7f08000e;
         public static final int hotImage3=0x7f080013;
         public static final int hotImage4=0x7f080018;
         public static final int hotImage5=0x7f08001d;
         public static final int hotList=0x7f080022;
-        public static final int hotName=0x7f080024;
-        public static final int hotTotals=0x7f080026;
+        public static final int hotName=0x7f08002b;
+        public static final int hotTotals=0x7f08002d;
+        public static final int juqing=0x7f080029;
+        public static final int leixing=0x7f080025;
         public static final int searchBox=0x7f080000;
         public static final int searchButton=0x7f080001;
+        public static final int shangyingshijian=0x7f080028;
         public static final int text1=0x7f080003;
         public static final int text11=0x7f08000a;
         public static final int text12=0x7f08000b;
@@ -66,6 +75,7 @@ public final class R {
         public static final int text5=0x7f080007;
         public static final int text6=0x7f080008;
         public static final int thumImage=0x7f080002;
+        public static final int zhuyan=0x7f080027;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
