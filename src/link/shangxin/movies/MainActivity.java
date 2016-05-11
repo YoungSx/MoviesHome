@@ -14,10 +14,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.thinkland.sdk.android.DataCallBack;
 import com.thinkland.sdk.android.JuheData;
@@ -27,7 +32,7 @@ public class MainActivity extends Activity {
 
 	Button searchButton;
 	EditText searchBox;
-
+	ListView hotList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,8 +40,9 @@ public class MainActivity extends Activity {
 
 		searchButton = (Button) findViewById(R.id.searchButton);
 		searchBox = (EditText) findViewById(R.id.searchBox);
-
+		hotList = (ListView) findViewById(R.id.hotList);
 		// 给搜索按钮添加click事件监听，并获取搜索框中的文本传到Result页面中
+		
 		searchButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -49,6 +55,8 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+
 
 		
 //		// 获取最近影讯的内容
@@ -211,7 +219,7 @@ public class MainActivity extends Activity {
 												R.id.hotWboxoffice,
 												R.id.hotTboxoffice });
 
-								ListView hotList = (ListView) findViewById(R.id.hotList);
+								
 
 								hotList.setAdapter(ada);
 
@@ -223,6 +231,22 @@ public class MainActivity extends Activity {
 						}
 					}
 				});
+		hotList.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View item, int index,long viewId) {
+				
+				TextView hotName = (TextView) item.findViewById(R.id.hotName);
+				//Toast.makeText(MainActivity.this, hotName.getText().toString(), Toast.LENGTH_SHORT).show();
+				
+				//跳转页面
+				Intent intent = new Intent(MainActivity.this,
+						ResultActivity.class);
+				String searchText = hotName.getText().toString();
+				intent.putExtra("searchText", searchText);
+				startActivity(intent);
+			}
+		});
 
 	}
 
