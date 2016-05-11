@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
 			}
 		});
         
+        /*
         //获取最近影讯的内容
         Parameters newMoviesParams = new Parameters();
         newMoviesParams.add("city","枣庄");
@@ -73,11 +74,12 @@ public class MainActivity extends Activity {
 			}
 		});
         
-        
+        */
         
         //获取网票票房
         Parameters hotMoviesParams = new Parameters();
-        JuheData.executeWithAPI(44, "http://v.juhe.cn/boxoffice/wp", JuheData.GET, hotMoviesParams, new DataCallBack() {
+        hotMoviesParams.add("area", "CN");
+        JuheData.executeWithAPI(44, "http://v.juhe.cn/boxoffice/rank", JuheData.GET, hotMoviesParams, new DataCallBack() {
 			
 			@Override
 			public void resultLoaded(int error_code, String reason, String jsonResult) {
@@ -90,7 +92,7 @@ public class MainActivity extends Activity {
 						
 						for(int i=0;i<result.length();i++){
 							JSONObject obj = result.getJSONObject(i);
-							Movie m = new Movie(obj.getString("name"),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""),obj.getString(""));
+							Movie m = new Movie(obj.getString("name"),obj.getString("wk"),obj.getString("wboxoffice"),obj.getString("tboxoffice"));
 							movies.add(m);
 						}
 						
@@ -105,9 +107,9 @@ public class MainActivity extends Activity {
 							Map<String, String> item = new HashMap<String, String>();
 
 							item.put("hotName", movies.get(i).getName());
-							item.put("hotBoxoffice", movies.get(i).getBoxoffice());
-							item.put("hotTotals", movies.get(i).getTotals());
-							item.put("hotFare", movies.get(i).getFare());
+							item.put("hotWk", movies.get(i).getWk());
+							item.put("hotWboxoffice", movies.get(i).getWboxoffice());
+							item.put("hotTboxoffice", movies.get(i).getTboxoffice());
 
 							// 将创建好的每条数据存放到总的集合
 							al.add(item);

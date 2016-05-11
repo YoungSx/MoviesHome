@@ -3,28 +3,19 @@ package link.shangxin.movies;
 public class Movie {
 
 	 private String name;
-     private String totals;
-     private String statistics;
-     private String averaging;
-     private String attendance;
-     private String people;
-     private String fare;
-     private String boxoffice;
+     private String wk;
+     private String wboxoffice;
+     private String tboxoffice;
+
      
      
-     
-	public Movie(String name, String totals, String statistics,
-			String averaging, String attendance, String people, String fare,
-			String boxoffice) {
+	public Movie(String name, String wk, String wboxoffice,
+			String tboxoffice) {
 		super();
 		this.name = name;
-		this.totals = totals;
-		this.statistics = statistics;
-		this.averaging = averaging;
-		this.attendance = attendance;
-		this.people = people;
-		this.fare = fare;
-		this.boxoffice = boxoffice;
+		this.wk = wk;
+		this.wboxoffice = wboxoffice;
+		this.tboxoffice = tboxoffice;
 	}
 	public String getName() {
 		return name;
@@ -32,47 +23,23 @@ public class Movie {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getTotals() {
-		return totals;
+	public String getWk() {
+		return wk;
 	}
-	public void setTotals(String totals) {
-		this.totals = totals;
+	public void setWk(String wk) {
+		this.wk = wk;
 	}
-	public String getStatistics() {
-		return statistics;
+	public String getWboxoffice() {
+		return wboxoffice;
 	}
-	public void setStatistics(String statistics) {
-		this.statistics = statistics;
+	public void setWboxoffice(String wboxoffice) {
+		this.wboxoffice = wboxoffice;
 	}
-	public String getAveraging() {
-		return averaging;
+	public String getTboxoffice() {
+		return tboxoffice;
 	}
-	public void setAveraging(String averaging) {
-		this.averaging = averaging;
-	}
-	public String getAttendance() {
-		return attendance;
-	}
-	public void setAttendance(String attendance) {
-		this.attendance = attendance;
-	}
-	public String getPeople() {
-		return people;
-	}
-	public void setPeople(String people) {
-		this.people = people;
-	}
-	public String getFare() {
-		return fare;
-	}
-	public void setFare(String fare) {
-		this.fare = fare;
-	}
-	public String getBoxoffice() {
-		return boxoffice;
-	}
-	public void setBoxoffice(String boxoffice) {
-		this.boxoffice = boxoffice;
+	public void setTboxoffice(String tboxoffice) {
+		this.tboxoffice = tboxoffice;
 	}
 
 }
