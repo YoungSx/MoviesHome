@@ -1,10 +1,17 @@
 package link.shangxin.movies;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -74,6 +81,7 @@ public class ResultActivity extends Activity {
 								zy.setText(zhuy);
 								sysj.setText(shay);
 								jq.setText(juq);
+//								hb.Bitmap();
 								
 							} catch (Exception e) {
 								e.printStackTrace();
