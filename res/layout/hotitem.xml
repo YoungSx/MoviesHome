@@ -1,31 +1,158 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#cccccc" >
 	    
-    		<LinearLayout 
-    		    android:layout_width="match_parent"
-    		    android:layout_height="wrap_content"
-    		    android:orientation="vertical">
+    		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="170dp"
+		    android:background="#ffffff"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="2dp" >
+
+		    <ImageView
+		        android:layout_width="120dp"
+		        android:layout_height="130dp"
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="8dp"
+		        android:src="@drawable/search1" />
+
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="126dp"
+		        android:layout_marginLeft="10dp"
+		        android:orientation="vertical"
+		        android:layout_marginRight="8dp"
+		        android:layout_marginTop="15dp">
+
+		        <LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="电影名:" />
+		        <TextView
+		            android:id="@+id/rcentTvTitle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="电影名" />
+		        </LinearLayout>
+				<LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="上映日期:" />
+		        <TextView
+		            android:id="@+id/rcentPlayData"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            
+		            android:text="上映日期" />
+		        </LinearLayout>
+				
+					<LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="主演:" />
+		        <TextView
+		            android:id="@+id/rcentStar"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            
+		            android:text="主演" />
+		        </LinearLayout>
+				<LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="导演:" />
+		        <TextView
+		            android:id="@+id/rcentDirector"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            
+		            android:text="导演" />
+				</LinearLayout>
+				<LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="类型:" />
+		        <TextView
+		            android:id="@+id/rcentType"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            
+		            android:text="类型" />
+		        </LinearLayout>
+				<LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <TextView
+		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="剧情:" />
+		        <TextView
+		            android:id="@+id/rcentStory"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            
+		            android:text="剧情" />
+		        </LinearLayout>
+		    </LinearLayout>
+		</LinearLayout>
+    
     		    <LinearLayout 
     		        android:layout_width="match_parent"
-    		        android:layout_height="wrap_content"
-    		        android:orientation="horizontal">
-    		        <ImageView 
-    		            android:layout_weight="1"
-    		             android:layout_width="50dp"
-	    		        android:layout_height="20dp"
-	    		        android:src="@drawable/search1"/>
+    		        android:layout_height="80dp"
+    		        android:orientation="horizontal"
+    		        android:layout_marginTop="2dp"
+    		        android:background="#ffffff"
+    		        >
+
+    		        <ImageView
+    		            android:layout_width="60dp"
+    		            android:layout_height="74dp"
+    		            android:layout_marginTop="2dp"
+    		            
+    		            android:src="@drawable/search1"
+    		            android:layout_marginLeft="35dp" />
 
     		        <LinearLayout
     		            android:layout_width="wrap_content"
     		            android:layout_height="wrap_content"
-    		            android:layout_weight="1"
-    		            android:orientation="vertical" >
+    		            
+    		            android:orientation="vertical" 
+    		            android:layout_marginTop="3dp"
+    		            android:layout_marginLeft="30dp"
+    		            >
 
     		            <LinearLayout 
     		                android:layout_width="match_parent"
-    		                android:layout_height="wrap_content">
+    		                android:layout_height="wrap_content"
+    		                >
 	    		             <TextView
 	    		                android:layout_width="wrap_content"
 	    		                android:layout_height="wrap_content"
@@ -39,7 +166,9 @@
 
     		             <LinearLayout 
     		                android:layout_width="match_parent"
-    		                android:layout_height="wrap_content">
+    		                android:layout_height="wrap_content"
+    		                android:layout_marginTop="2dp"
+    		                android:orientation="horizontal">
 	    		             <TextView
 	    		                
 	    		                android:layout_width="wrap_content"
@@ -54,7 +183,9 @@
     		             </LinearLayout>
     		             <LinearLayout 
     		                android:layout_width="match_parent"
-    		                android:layout_height="wrap_content">
+    		                android:layout_height="wrap_content"
+    		                android:layout_marginTop="2dp"
+    		                android:orientation="horizontal">
 	    		             <TextView
 	    		                android:layout_width="wrap_content"
 	    		                android:layout_height="wrap_content"
@@ -68,11 +199,14 @@
 
     		              <LinearLayout 
     		                android:layout_width="match_parent"
-    		                android:layout_height="wrap_content">
+    		                android:layout_height="wrap_content"
+    		                android:orientation="horizontal"
+    		                android:layout_marginTop="2dp">
 	    		             <TextView
 	    		                android:layout_width="wrap_content"
 	    		                android:layout_height="wrap_content"
-	    		                android:text="累计票房:" />
+	    		                android:text="累计票房:" 
+	    		                />
     		           		 <TextView
     		                android:id="@+id/hotTboxoffice"
     		                android:layout_width="wrap_content"
@@ -81,6 +215,6 @@
     		            	</LinearLayout>
     		        </LinearLayout>
 
-    		    </LinearLayout>
+    		   
     </LinearLayout>
 </LinearLayout>
