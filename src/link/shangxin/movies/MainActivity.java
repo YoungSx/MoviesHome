@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(MainActivity.this,ResultActivity.class);
 				String searchText = searchBox.getText().toString();
 				intent.putExtra("searchText", searchText);
+				startActivity(intent);
 			}
 		});
         
@@ -116,10 +117,18 @@ public class MainActivity extends Activity {
 						}
 						//创建适配器：按照item.xml布局中的格式填充数据，并将这些item绑定到ListView中
 						
+						/*
 						SimpleAdapter ada = new SimpleAdapter(
 								MainActivity.this, al, R.layout.hotitem, 
 								new String[]{"hotName","hotWk","hotWboxoffice","hotTboxoffice"}, 
 								new int[]{R.id.hotName,R.id.hotWk, R.id.hotWboxoffice, R.id.hotTboxoffice}
+						);
+						*/
+						
+						SimpleAdapter ada = new SimpleAdapter(
+								MainActivity.this, al, R.layout.hotitem, 
+								new String[]{"hotName"}, 
+								new int[]{R.id.hotName}
 						);
 						
 						ListView hotList = (ListView) findViewById(R.id.hotList);
