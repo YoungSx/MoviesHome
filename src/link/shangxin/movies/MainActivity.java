@@ -118,8 +118,8 @@ public class MainActivity extends Activity {
 						
 						SimpleAdapter ada = new SimpleAdapter(
 								MainActivity.this, al, R.layout.hotitem, 
-								new String[]{"hotName","hotBoxoffice","hotTotals","hotFare"}, 
-								new int[]{R.id.hotName, R.id.hotBoxoffice, R.id.hotTotals,R.id.hotFare}
+								new String[]{"hotName","hotWk","hotWboxoffice","hotTboxoffice"}, 
+								new int[]{R.id.hotName,R.id.hotWk, R.id.hotWboxoffice, R.id.hotTboxoffice}
 						);
 						
 						ListView hotList = (ListView) findViewById(R.id.hotList);
