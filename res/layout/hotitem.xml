@@ -25,22 +25,22 @@
     		    	     android:id="@+id/hotName"
 	    		        android:layout_width="wrap_content"
 	    		        android:layout_height="wrap_content"
-	    		        android:text="电影名"/>
+	    		        android:text="影片名称"/>
     		    	 <TextView 
-    		    	     android:id="@+id/hotBoxoffice"
+    		    	     android:id="@+id/hotWk"
 	    		        android:layout_width="wrap_content"
 	    		        android:layout_height="wrap_content"
-	    		        android:text="票房"/>
+	    		        android:text="榜单周数"/>
     		    	 <TextView 
-    		    	     android:id="@+id/hotTotals"
+    		    	     android:id="@+id/hotWboxoffice"
 	    		        android:layout_width="wrap_content"
 	    		        android:layout_height="wrap_content"
-	    		        android:text="总场次"/>
+	    		        android:text="周末票房"/>
     		    	 <TextView 
-    		    	     android:id="@+id/hotFare"
+    		    	     android:id="@+id/hotTboxoffice"
 	    		        android:layout_width="wrap_content"
 	    		        android:layout_height="wrap_content"
-	    		        android:text="票价"/>
+	    		        android:text="累计票房"/>
     		    	 </LinearLayout>
     		    </LinearLayout>
     </LinearLayout>
