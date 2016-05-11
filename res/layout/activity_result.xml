@@ -39,6 +39,7 @@
             android:id="@+id/leixing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="     类型"
             android:textSize="20sp" />
 
@@ -46,6 +47,7 @@
             android:id="@+id/daoyan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="     导演"
             android:textSize="20sp" />
 
@@ -53,6 +55,7 @@
             android:id="@+id/zhuyan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="     主演"
             android:textSize="20sp" />
 
@@ -60,6 +63,7 @@
             android:id="@+id/shangyingshijian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="    上映时间"
             android:textSize="20sp" />
 
@@ -77,6 +81,10 @@
         android:layout_height="0dp"
         android:layout_weight="15"
         >
+        <ImageView 
+            android:id="@+id/tupian"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
     </LinearLayout>
 
 </LinearLayout>
