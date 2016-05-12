@@ -2,9 +2,8 @@
 <resources>
 
     <string name="app_name">爱电影</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_result">ResultActivity</string>
-    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_result">爱电影</string>
+    <string name="title_activity_welcome">爱电影</string>
 
 </resources>
