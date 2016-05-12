@@ -62,7 +62,7 @@
 		
     		<LinearLayout
     		    android:layout_width="match_parent"
-    		    android:layout_height="match_parent"
+    		    android:layout_height="620dp"
     		    android:orientation="vertical" >
 
     		
@@ -72,13 +72,13 @@
     		        android:id="@+id/hotList"
     		        android:layout_width="match_parent"
     		        android:layout_height="match_parent"
-    		        android:background="#ffffff"
+    		        android:background="@drawable/timg"
     		        android:layout_marginTop="2dp">
     		   </ListView>
     		    
     		</LinearLayout>
 
-    	<!--  <LinearLayout
+    	<LinearLayout
     	    android:layout_width="match_parent"
     	    android:layout_height="match_parent"
     	    android:orientation="horizontal" >
@@ -104,5 +104,5 @@
     	    android:text="最近影讯"
     	    android:background="#ffffff"/>
 		</LinearLayout>
-		-->
+		
 </LinearLayout>
