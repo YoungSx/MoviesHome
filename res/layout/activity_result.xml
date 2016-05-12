@@ -1,133 +1,194 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/fff"
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:layout_height="wrap_content" >
 
-        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="300dp" >
+
+                <ImageView
+                    android:id="@+id/tupian"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/dianyingming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="电影名"
+                        android:textSize="35sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     类型:"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/leixing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     类型"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     导演:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/daoyan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="     导演"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     主演:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/zhuyan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="     主演"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     评分:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/pingfen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="     评分"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="    上映时间:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/shangyingshijian"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="    上映时间"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical" >
+        android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/dianyingming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     剧情:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/juqing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="电影名"
-            android:textSize="35sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="     类型:"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/leixing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="     类型"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="     导演:"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/daoyan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="     导演"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="     主演:"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/zhuyan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="     主演"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="    上映时间:"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/shangyingshijian"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="    上映时间"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="     剧情:"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/juqing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="     剧情"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="15" >
-        <ImageView android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:id="@+id/tupian"/>
+            android:text="     剧情"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>
