@@ -9,6 +9,7 @@
 	     android:orientation="horizontal"
 	     android:background="#cccccc">
 	     <ImageView 
+	         android:id="@+id/tqImage"
 	          android:layout_width="wrap_content"
 	          android:layout_height="match_parent"/>
 	     
@@ -38,7 +39,7 @@
 		
     		<LinearLayout
     		    android:layout_width="match_parent"
-    		    android:layout_height="355dp"
+    		    android:layout_height="620dp"
     		    android:orientation="vertical" >
 
     		
@@ -64,12 +65,20 @@
     	    android:layout_width="match_parent"
     	    android:layout_height="match_parent"
     	    android:layout_weight="1"
-    	    android:text="热门排行"/>
+    	    android:text="热门排行"
+    	    android:background="#ffffff"/>
+    	<TextView
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="match_parent"
+    	    android:text=" "
+    	    
+    	    android:gravity="center_horizontal"/>
     	<Button 
     	    android:id="@+id/zjButton"
     		android:layout_width="match_parent"
     	    android:layout_height="match_parent"
     	    android:layout_weight="1"
-    	    android:text="最近影讯"/>
+    	    android:text="最近影讯"
+    	    android:background="#ffffff"/>
 		</LinearLayout>
 </LinearLayout>
