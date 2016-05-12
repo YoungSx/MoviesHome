@@ -33,7 +33,7 @@ public class WelcomeActivity extends Activity {
 				Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
 				
 				startActivity(intent);
-				
+				finish();
 			}
 		}, 3000);
 	}

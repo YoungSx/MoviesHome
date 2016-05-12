@@ -1,35 +1,42 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/timg"
     android:orientation="vertical" >
 
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-        
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/searchBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="请输入电影名"
+            android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/searchBox"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:hint="请输入电影名"
-                android:textSize="15sp" />
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/search1" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/searchButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/search1" />
-        </LinearLayout>
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/hotList"
             android:layout_width="match_parent"
+<<<<<<< Updated upstream
             android:layout_height="660dp"
             android:orientation="vertical" >
 
@@ -71,6 +78,39 @@
                 android:text="最近影讯" />
         </LinearLayout>
         
+=======
+            android:layout_height="match_parent"
+            android:background="@drawable/timg" >
+        </ListView>
+    </LinearLayout>
+
+>>>>>>> Stashed changes
     
 
 </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         android:layout_alignParentBottom="true">"
+
+        <Button
+            android:id="@+id/rmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="热门排行" />
+		<TextView 
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="#CCCCCC"/>
+        <Button
+            android:id="@+id/zjButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="最近影讯" />
+    </LinearLayout>
+</RelativeLayout>
