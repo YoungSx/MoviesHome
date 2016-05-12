@@ -57,6 +57,118 @@ public class MainActivity extends Activity {
 		});
 		
 
+		Button zjButton = (Button) findViewById(R.id.zjButton);
+		zjButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				// 获取最近影讯的内容
+				Parameters newMoviesParams = new Parameters();
+				JuheData.executeWithAPI(94, "http://op.juhe.cn/onebox/movie/pmovie",
+						JuheData.GET, newMoviesParams, new DataCallBack() {
+		
+							@Override
+							public void resultLoaded(int error_code, String reason,
+									String jsonResult) {
+								// TODO Auto-generated method stub
+								if (error_code == 0) {
+									JSONObject json;
+									List<RecentMovie> recentMovies = new ArrayList<RecentMovie>();
+									try {
+										JSONArray result = new JSONObject(jsonResult)
+												.getJSONObject("result").getJSONArray(
+														"data");
+		
+										JSONObject showingMovies = result.getJSONObject(0); // 正在上映
+										for (int i = 0; i < showingMovies.length(); i++) {
+											// 获取单个电影项目
+											JSONObject obj = showingMovies
+													.getJSONArray("0").getJSONObject(0);
+											RecentMovie m = new RecentMovie(
+													obj.getString("tvTitle"),
+													obj.getString("playDate"),
+													obj.getString("star"),
+													obj.getString("director"),
+													obj.getString("type"),
+													obj.getString("story"),
+													"正在上映"
+													);
+											recentMovies.add(m);
+										}
+										
+										JSONObject soonMovies = result.getJSONObject(1); // 即将上映
+										for (int i = 0; i < soonMovies.length(); i++) {
+											// 获取单个电影项目
+											JSONObject obj = soonMovies
+													.getJSONArray("0").getJSONObject(0);
+											RecentMovie m = new RecentMovie(
+													obj.getString("tvTitle"),
+													obj.getString("playDate"),
+													obj.getString("star"),
+													obj.getString("director"),
+													obj.getString("type"),
+													obj.getString("story"),
+													"即将上映"
+													);
+											recentMovies.add(m);
+										}
+										
+										
+										
+										// 准备数据：数据必须放到集合中
+										ArrayList<Map<String, String>> al = new ArrayList<Map<String, String>>();
+		
+										for (int i = 0; i < (showingMovies.length()+soonMovies.length()); i++) {
+		
+											// 创建一个保存一个Item的数据的集合
+											Map<String, String> item = new HashMap<String, String>();
+		
+											item.put("recentTvTitle", recentMovies.get(i)
+													.getTvTitle());
+											item.put("recentPlayDate", recentMovies.get(i)
+													.getPlayDate());
+											item.put("recentStar",
+													recentMovies.get(i).getStar());
+											item.put("recentDirector",
+													recentMovies.get(i).getDirector());
+											item.put("recentType",
+													recentMovies.get(i).getType());
+											item.put("recentStory",
+													recentMovies.get(i).getStory());
+											item.put("recentState",
+													recentMovies.get(i).getState());
+		
+											// 将创建好的每条数据存放到总的集合
+											al.add(item);
+										}
+		
+										// 创建适配器：按照item.xml布局中的格式填充数据，并将这些item绑定到ListView中
+										SimpleAdapter ada = new SimpleAdapter(
+												MainActivity.this, al,
+												R.layout.recentitem, new String[] {
+														"recentTvTitle", "recentPlayDate",
+														"recentStar",
+														"recentDirector","recentType",
+														"recentStory","recentState" }, new int[] {
+														R.id, R.id.hotWk,
+														R.id.hotWboxoffice,
+														R.id.hotTboxoffice });
+		
+										ListView hotList = (ListView) findViewById(R.id.hotList);
+		
+										hotList.setAdapter(ada);
+		
+									} catch (JSONException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+		
+								}
+							}
+						});
+			}
+		});
 
 		
 //		// 获取最近影讯的内容
