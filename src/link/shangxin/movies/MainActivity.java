@@ -151,7 +151,7 @@ public class MainActivity extends Activity {
 														"recentStar",
 														"recentDirector","recentType",
 														"recentStory","recentState" }, new int[] {
-														R.id, R.id.hotWk,
+														R.id.recentTvTitle, R.id.recentPlayDate,
 														R.id.hotWboxoffice,
 														R.id.hotTboxoffice });
 		

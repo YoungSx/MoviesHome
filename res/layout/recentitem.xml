@@ -52,7 +52,7 @@
                 android:text="上映日期:" />
 
             <TextView
-                android:id="@+id/recentPlayData"
+                android:id="@+id/recentPlayDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="上映日期" />

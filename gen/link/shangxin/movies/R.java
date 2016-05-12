@@ -44,7 +44,7 @@ public final class R {
         public static final int leixing=0x7f080007;
         public static final int myLayout=0x7f08000d;
         public static final int recentDirector=0x7f080015;
-        public static final int recentPlayData=0x7f080013;
+        public static final int recentPlayDate=0x7f080013;
         public static final int recentStar=0x7f080014;
         public static final int recentStory=0x7f080017;
         public static final int recentTvTitle=0x7f080012;
