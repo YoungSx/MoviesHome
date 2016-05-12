@@ -100,14 +100,14 @@ public class MainActivity extends Activity {
 													.getJSONObject("story")
 													.getJSONObject("data")
 													.getString("storyBrief")
-													.substring(0, 10)
+													.substring(0, 30)
 													+ "...";
 											RecentMovie m = new RecentMovie(obj
 													.getString("tvTitle"), obj
 													.getJSONObject("playDate")
 													.getString("data"), obj
-													.getJSONObject("playDate")
-													.getString("showname"), obj
+													.getJSONObject("star").getJSONObject("data").getJSONObject("1")
+													.getString("name"), obj
 													.getJSONObject("director")
 													.getJSONObject("data")
 													.getJSONObject("1")

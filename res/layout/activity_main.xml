@@ -30,7 +30,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="620dp"
+            android:layout_height="660dp"
             android:orientation="vertical" >
 
             <ListView
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#ffffff"
+                android:background="#cccccc"
                 android:text="热门排行" />
 
             <TextView
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#ffffff"
+                android:background="#cccccc"
                 android:text="最近影讯" />
         </LinearLayout>
         
