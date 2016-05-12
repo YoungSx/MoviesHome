@@ -35,7 +35,7 @@
                 android:text="电影名:" />
 
             <TextView
-                android:id="@+id/rcentTvTitle"
+                android:id="@+id/recentTvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="电影名" />
@@ -52,7 +52,7 @@
                 android:text="上映日期:" />
 
             <TextView
-                android:id="@+id/rcentPlayData"
+                android:id="@+id/recentPlayData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="上映日期" />
@@ -69,7 +69,7 @@
                 android:text="主演:" />
 
             <TextView
-                android:id="@+id/rcentStar"
+                android:id="@+id/recentStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="主演" />
@@ -86,7 +86,7 @@
                 android:text="导演:" />
 
             <TextView
-                android:id="@+id/rcentDirector"
+                android:id="@+id/recentDirector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="导演" />
@@ -103,7 +103,7 @@
                 android:text="类型:" />
 
             <TextView
-                android:id="@+id/rcentType"
+                android:id="@+id/recentType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="类型" />
@@ -120,7 +120,7 @@
                 android:text="剧情:" />
 
             <TextView
-                android:id="@+id/rcentStory"
+                android:id="@+id/recentStory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="剧情" />
