@@ -18,12 +18,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.thinkland.sdk.android.DataCallBack;
 import com.thinkland.sdk.android.JuheData;
 import com.thinkland.sdk.android.Parameters;
@@ -87,8 +84,7 @@ public class MainActivity extends Activity {
 												"result").getJSONArray("data");
 
 										JSONArray showingMovies = result
-												.getJSONObject(0).getJSONArray(
-														"data"); // 正在上映
+												.getJSONObject(0).getJSONArray("data"); // 正在上映
 										for (int i = 0; i < showingMovies
 												.length(); i++) {
 											// 获取单个电影项目
@@ -158,13 +154,15 @@ public class MainActivity extends Activity {
 										SimpleAdapter ada = new SimpleAdapter(
 												MainActivity.this, al,
 												R.layout.recentitem,
-												new String[] { "recentTvTitle",
+												new String[] { 
+														"recentTvTitle",
 														"recentPlayDate",
 														"recentStar",
 														"recentDirector",
 														"recentType",
 														"recentStory" },
-												new int[] { R.id.recentTvTitle,
+												new int[] { 
+														R.id.recentTvTitle,
 														R.id.recentPlayDate,
 														R.id.recentStar,
 														R.id.recentDirector,

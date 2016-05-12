@@ -10,7 +10,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -33,6 +32,7 @@ public class ResultActivity extends Activity {
 	TextView pf;
 	String addr = "http://img.baidu.com/img/iknow/sula2604/wenka270170.jpg";
 
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
@@ -62,6 +62,7 @@ public class ResultActivity extends Activity {
 					// error_code 服务器的状态码，如果是0，说明服务器一切运行正常，如果不是0，说明服务器有问题
 					// reasion：如果服务器发生了错误，没有正常运行，他保存的就是错误原因
 					// jsonResult:服务器返回的结果
+					@Override
 					public void resultLoaded(int error_code, String reason,
 							String jsonResult) {
 						if (jsonResult == null) {
@@ -125,6 +126,7 @@ public class ResultActivity extends Activity {
 										//hb.setBackground(result);
 									}
 
+									@Override
 									protected Bitmap doInBackground(
 											String... arg0) {
 										// TODO Auto-generated method stub
