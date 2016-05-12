@@ -10,8 +10,30 @@
 	     android:background="#cccccc">
 	     <ImageView 
 	         android:id="@+id/tqImage"
-	          android:layout_width="wrap_content"
-	          android:layout_height="match_parent"/>
+	          android:layout_width="40dp"
+	          android:layout_height="30dp"
+	          android:src="@drawable/search1"/>
+	     <TextView
+	         android:id="@+id/tqText"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="match_parent"
+    	    android:layout_weight="1"
+    	    android:gravity="center"
+    	    android:text="天气" />
+	     <TextView
+	         android:id="@+id/wdText"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="match_parent"
+    	     android:layout_weight="1"
+    	     android:gravity="center"
+    	    android:text="温度" />
+	     <TextView
+	         android:id="@+id/sdText"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="match_parent"
+    	     android:layout_weight="1"
+    	     android:gravity="center"
+    	    android:text="湿度" />
 	     
 	     
 	 </LinearLayout>   
@@ -29,6 +51,7 @@
 
 			<Button
 			    android:id="@+id/searchButton"
+			    
 			    android:layout_width="40dp"
 			    android:layout_height="40dp"
 			    android:background="@drawable/search1"
@@ -39,7 +62,7 @@
 		
     		<LinearLayout
     		    android:layout_width="match_parent"
-    		    android:layout_height="620dp"
+    		    android:layout_height="match_parent"
     		    android:orientation="vertical" >
 
     		
@@ -55,7 +78,7 @@
     		    
     		</LinearLayout>
 
-    	<LinearLayout
+    	<!--  <LinearLayout
     	    android:layout_width="match_parent"
     	    android:layout_height="match_parent"
     	    android:orientation="horizontal" >
@@ -81,4 +104,5 @@
     	    android:text="最近影讯"
     	    android:background="#ffffff"/>
 		</LinearLayout>
+		-->
 </LinearLayout>
