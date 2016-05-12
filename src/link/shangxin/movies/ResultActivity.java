@@ -30,6 +30,7 @@ public class ResultActivity extends Activity {
 	TextView sysj;
 	TextView jq;
 	ImageView hb;
+	TextView pf;
 	String addr = "http://img.baidu.com/img/iknow/sula2604/wenka270170.jpg";
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class ResultActivity extends Activity {
 		sysj = (TextView) findViewById(R.id.shangyingshijian);
 		jq = (TextView) findViewById(R.id.juqing);
 		hb = (ImageView) findViewById(R.id.tupian);
+		pf = (TextView) findViewById(R.id.pingfen);
 		Intent intent = getIntent();
 		String name = intent.getStringExtra("searchText");
 		// 创建一个存放城市信息的容器
@@ -87,6 +89,16 @@ public class ResultActivity extends Activity {
 										.getString("desc");
 								String haib = json.getJSONObject("result")
 										.getString("cover");
+								String xing = ("★ ★ ★ ★ ★");
+								double xj = json.getJSONObject("result").getDouble("rating");
+//								int sz = Integer.parseInt(xj,10);
+//								String zh =  xing.substring(0, sz-1);
+								
+								Double double1=new Double(xj);
+								int a=double1.intValue();
+								String zh =  xing.substring(0, a-1);
+								//System.out.println("xj:"+a);
+								
 								/*
   								String youkuURL = json.getJSONObject("result")
 										.getJSONObject("playlinks")
@@ -99,7 +111,7 @@ public class ResultActivity extends Activity {
 								zy.setText(zhuy);
 								sysj.setText(shay);
 								jq.setText(juq);
-								
+								pf.setText(String.valueOf(zh));
 								// hb.Bitmap();
 
 								AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
