@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-
+		
 		Button zjButton = (Button) findViewById(R.id.zjButton);
 		zjButton.setOnClickListener(new OnClickListener() {
 			
@@ -64,14 +64,17 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				// 获取最近影讯的内容
+				
 				Parameters newMoviesParams = new Parameters();
+				newMoviesParams.add("city","济宁");
 				JuheData.executeWithAPI(94, "http://op.juhe.cn/onebox/movie/pmovie",
-						JuheData.GET, newMoviesParams, new DataCallBack() {
+						JuheData.POST, newMoviesParams, new DataCallBack() {
 		
 							@Override
 							public void resultLoaded(int error_code, String reason,
 									String jsonResult) {
 								// TODO Auto-generated method stub
+								
 								if (error_code == 0) {
 									JSONObject json;
 									List<RecentMovie> recentMovies = new ArrayList<RecentMovie>();
@@ -79,12 +82,15 @@ public class MainActivity extends Activity {
 										JSONArray result = new JSONObject(jsonResult)
 												.getJSONObject("result").getJSONArray(
 														"data");
-		
+										
 										JSONObject showingMovies = result.getJSONObject(0); // 正在上映
+										Toast.makeText(MainActivity.this, showingMovies.length(), Toast.LENGTH_SHORT).show();
 										for (int i = 0; i < showingMovies.length(); i++) {
 											// 获取单个电影项目
+											
 											JSONObject obj = showingMovies
 													.getJSONArray("0").getJSONObject(0);
+											
 											RecentMovie m = new RecentMovie(
 													obj.getString("tvTitle"),
 													obj.getString("playDate"),
@@ -97,6 +103,7 @@ public class MainActivity extends Activity {
 											recentMovies.add(m);
 										}
 										
+										/*
 										JSONObject soonMovies = result.getJSONObject(1); // 即将上映
 										for (int i = 0; i < soonMovies.length(); i++) {
 											// 获取单个电影项目
@@ -113,13 +120,13 @@ public class MainActivity extends Activity {
 													);
 											recentMovies.add(m);
 										}
-										
+										*/
 										
 										
 										// 准备数据：数据必须放到集合中
 										ArrayList<Map<String, String>> al = new ArrayList<Map<String, String>>();
 		
-										for (int i = 0; i < (showingMovies.length()+soonMovies.length()); i++) {
+										for (int i = 0; i < (showingMovies.length()); i++) {
 		
 											// 创建一个保存一个Item的数据的集合
 											Map<String, String> item = new HashMap<String, String>();
@@ -150,10 +157,13 @@ public class MainActivity extends Activity {
 														"recentTvTitle", "recentPlayDate",
 														"recentStar",
 														"recentDirector","recentType",
-														"recentStory","recentState" }, new int[] {
+														"recentStory"}, new int[] {
 														R.id.recentTvTitle, R.id.recentPlayDate,
-														R.id.hotWboxoffice,
-														R.id.hotTboxoffice });
+														R.id.recentStar,
+														R.id.recentDirector,
+														R.id.recentType,
+														R.id.recentStory
+														});
 		
 										ListView hotList = (ListView) findViewById(R.id.hotList);
 		
