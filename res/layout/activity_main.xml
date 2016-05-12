@@ -1,108 +1,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/timg" >
-	 <LinearLayout 
-	     android:layout_width="match_parent"
-	     android:layout_height="30dp"
-	     android:orientation="horizontal"
-	     android:background="#cccccc">
-	     <ImageView 
-	         android:id="@+id/tqImage"
-	          android:layout_width="40dp"
-	          android:layout_height="30dp"
-	          android:src="@drawable/search1"/>
-	     <TextView
-	         android:id="@+id/tqText"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent"
-    	    android:layout_weight="1"
-    	    android:gravity="center"
-    	    android:text="天气" />
-	     <TextView
-	         android:id="@+id/wdText"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent"
-    	     android:layout_weight="1"
-    	     android:gravity="center"
-    	    android:text="温度" />
-	     <TextView
-	         android:id="@+id/sdText"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent"
-    	     android:layout_weight="1"
-    	     android:gravity="center"
-    	    android:text="湿度" />
-	     
-	     
-	 </LinearLayout>   
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal">
-			<EditText
-	            android:id="@+id/searchBox"
-	            android:layout_weight="1"
-	            android:layout_height="40dp"
-	            android:layout_width="match_parent"
-	            android:hint="请输入电影名"
-	            android:textSize="15sp" />
+    android:background="@drawable/timg"
+    android:orientation="vertical" >
 
-			<Button
-			    android:id="@+id/searchButton"
-			    
-			    android:layout_width="40dp"
-			    android:layout_height="40dp"
-			    android:background="@drawable/search1"
-			     />
+    
 
-		 </LinearLayout>
-		 
-		
-    		<LinearLayout
-    		    android:layout_width="match_parent"
-    		    android:layout_height="460dp"
-    		    android:orientation="vertical" >
+        
 
-    		
-    		   
-    		
-    		    <ListView 
-    		        android:id="@+id/hotList"
-    		        android:layout_width="match_parent"
-    		        android:layout_height="match_parent"
-    		        android:background="@drawable/timg"
-    		        android:layout_marginTop="2dp">
-    		   </ListView>
-    		    
-    		</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
-    	<LinearLayout
-    	    android:layout_width="match_parent"
-    	    android:layout_height="match_parent"
-    	    android:orientation="horizontal" >
+            <EditText
+                android:id="@+id/searchBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="请输入电影名"
+                android:textSize="15sp" />
 
-    	<Button 
-    	    android:id="@+id/rmButton"
-    	    android:layout_width="match_parent"
-    	    android:layout_height="match_parent"
-    	    android:layout_weight="1"
-    	    android:text="热门排行"
-    	    android:background="#ffffff"/>
-    	<TextView
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent"
-    	    android:text=" "
-    	    
-    	    android:gravity="center_horizontal"/>
-    	<Button 
-    	    android:id="@+id/zjButton"
-    		android:layout_width="match_parent"
-    	    android:layout_height="match_parent"
-    	    android:layout_weight="1"
-    	    android:text="最近影讯"
-    	    android:background="#ffffff"/>
-		</LinearLayout>
-		
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/hotList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/timg" >
+            </ListView>
+        </LinearLayout>
+	
+	   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+             >
+
+            <Button
+                android:id="@+id/rmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="热门排行" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text=" " />
+
+            <Button
+                android:id="@+id/zjButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="最近影讯" />
+        </LinearLayout>
+        
+    
+
 </LinearLayout>
